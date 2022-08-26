@@ -2,7 +2,7 @@ name: Tests
 
 on:
   workflow_run:
-    workflows: [Upload data]
+    workflows: [Lints]
     types:
       - completed
   push:
