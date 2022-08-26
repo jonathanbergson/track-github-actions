@@ -26,7 +26,7 @@ jobs:
       - name: Install Dependencies
         run: yarn install
 
-  unitary:
+  unit:
     name: Unitários
     runs-on: ubuntu-latest
     needs: [ setup ]
@@ -35,7 +35,7 @@ jobs:
       - name: Code Linting
         run: echo "Teste unitários"
 
-  unitary:
+  spec:
     name: Especificação
     runs-on: ubuntu-latest
     needs: [ setup ]
