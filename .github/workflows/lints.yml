@@ -1,0 +1,31 @@
+name: Lints
+
+on:
+  pull_request:
+    branches:
+      - development
+      - staging
+      - production
+
+env:
+  NODE_VERSION: 16
+
+jobs:
+  eslint:
+    name: Run eslint
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Install NodeJS
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: Code Checkout
+        uses: actions/checkout@v2
+
+      - name: Install Dependencies
+        run: yarn install
+
+      - name: Code Linting
+        run: yarn lint
