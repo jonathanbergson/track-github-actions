@@ -11,7 +11,7 @@ env:
 
 jobs:
   eslint:
-    name: Run eslint
+    name: ESLint
     runs-on: ubuntu-latest
 
     steps:
