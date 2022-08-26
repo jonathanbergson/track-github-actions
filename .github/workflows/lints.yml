@@ -1,11 +1,10 @@
 name: Lints
 
 on:
+  push:
+    branches: [ main ]
   pull_request:
-    branches:
-      - development
-      - staging
-      - production
+    branches: [ main ]
 
 env:
   NODE_VERSION: 16
