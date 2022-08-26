@@ -1,4 +1,4 @@
-name: Testes
+name: Tests
 
 on:
   push:
@@ -13,6 +13,7 @@ jobs:
   setup:
     name: Setup
     runs-on: ubuntu-latest
+    needs: [ eslint ]
 
     steps:
       - name: Install NodeJS
