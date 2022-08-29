@@ -10,8 +10,8 @@ env:
   NODE_VERSION: 16
 
 jobs:
-  eslint:
-    name: ESLint
+  setup:
+    name: Setup
     runs-on: ubuntu-latest
 
     steps:
