@@ -26,14 +26,5 @@ jobs:
       - name: Install Dependencies
         run: yarn install
 
-  eslint:
-    name: ESLint
-    runs-on: ubuntu-latest
-    needs: [ setup ]
-
-    steps:
-      - name: Code Checkout
-        uses: actions/checkout@v2
-        
       - name: Code Linting
         run: yarn lint
