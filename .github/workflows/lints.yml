@@ -32,5 +32,8 @@ jobs:
     needs: [ setup ]
 
     steps:
+      - name: Code Checkout
+        uses: actions/checkout@v2
+        
       - name: Code Linting
         run: yarn lint
